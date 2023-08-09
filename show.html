@@ -8,25 +8,72 @@
 </head>
 <body>
 
-    <img id="darkmode_button" src="./darkmode_moon.png"/>
     <div class="header">
-        <img id="logo_img" src="./image.jpg"/>
-        <h1>Bitcoin</h1>
+        <h1>Wellcome</h1>
     </div>
     <div class="container">
-        <div class="data_div">
-           <img id="data_img" src="./image2.jpg"/>
-           <p id="data_p">bitcoin is the best coin ever</p>
-           <p id="data_p">bitcoin is the best coin ever</p>
-           <p id="data_p">bitcoin is the best coin ever</p>
-           <p id="data_p">bitcoin is the best coin ever</p>
-           <p id="data_p">bitcoin is the best coin ever</p>
+        <div class="left_side_div">
+            <div class="icon_left_side_div">
+                <img id="home_button" src="./home_icon.png"/>
+            </div>
+            <div class="icon_left_side_div">
+                <img id="person_button" src="./person_icon.png"/>
+            </div>
+            <div class="icon_left_side_div">
+                <img id="coin_button" src="./coin_icon.png"/>
+            </div>
+            <div class="icon_left_side_div">
+                <img id="darkmode_button" src="./darkmode_moon.png"/>
+            </div>
         </div>
+
+        <div class="main_div">
+            <div class="data_div">
+                <div class="chart_div">
+                    <canvas id="myChart" class="chart"></canvas>
+                </div>
+                <div class="detail_div">
+                    <img src="./Bitcoin.svg"/>
+                </div>
+            </div>
+            <div class="news_div">
+                <div class="item_news_right_side_div">
+                    <img class="img_item_news_right_side_div" src="./image2.jpg"/>
+                    <span class="text__item_news_right_side_div">HelloHello Hello Hello Hello</span>
+                </div>
+                <div class="item_news_right_side_div">
+                    <img class="img_item_news_right_side_div" src="./image2.jpg"/>
+                    <span class="text__item_news_right_side_div">HelloHello Hello Hello Hello</span>
+                </div>
+                <div class="item_news_right_side_div">
+                    <img class="img_item_news_right_side_div" src="./image2.jpg"/>
+                    <span class="text__item_news_right_side_div">HelloHello Hello Hello Hello</span>
+                </div>
+                <div class="item_news_right_side_div">
+                    <img class="img_item_news_right_side_div" src="./image2.jpg"/>
+                    <span class="text__item_news_right_side_div">HelloHello Hello Hello Hello</span>
+                </div>
+                <div class="item_news_right_side_div">
+                    <img class="img_item_news_right_side_div" src="./image2.jpg"/>
+                    <span class="text__item_news_right_side_div">HelloHello Hello Hello Hello</span>
+                </div>
+                <div class="item_news_right_side_div">
+                    <img class="img_item_news_right_side_div" src="./image2.jpg"/>
+                    <span class="text__item_news_right_side_div">HelloHello Hello Hello Hello HelloHello Hello Hello HelloHelloHello Hello Hello HelloHelloHello Hello Hello HelloHelloHello Hello Hello HelloHelloHello Hello Hello HelloHelloHello Hello Hello HelloHelloHello Hello Hello Hello</span>
+                </div>
+            </div>
+        </div>
+
+        
     </div>
-
-
+    <div class="footer">
+        <span>Created By <a href="https://www.google.cm">Me</a></span>
+    </div>
     <button id="gototop_button">Top</button>
+    
+    <script src="./Chart.js"/>
+    // <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="./show.js"/>
 
-    <script src="./fun.js"/>
 </body>
 </html>

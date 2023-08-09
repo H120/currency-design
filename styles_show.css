@@ -2,120 +2,162 @@ html{
     scroll-behavior: smooth;
 }
 body{
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
     --border: 1px solid;
-    --border_raduis: 5px;
+    --border_raduis: 20px;
 
-    --background_color: #fff;
-    --container_background_color: #fefefe;
+    --background_color: #fdfdfd;
+    --background_color_2: #f9f9f9;
+    --background_color_3: #f2f2f2;
+    --container_background_color: #fefefe60;
     --border_color: #e3e3e3;
+    --invert_color: 100;
+    --light_text_color: #363636;
+    --dark_text_color: #f6f6f6;
 
-    --text_color: #363636;
+    --transition_value:top .2s ease-in-out, right .2s ease-in-out, left .2s ease-in-out, transform .2s ease-in-out, z-index .2s ease-in-out, font-size .2s ease-in-out, box-shadow .2s ease-in-out, border .2s ease-in-out;
 
-    background-color: var(--background_color);
+    background-image: linear-gradient(180deg, var(--background_color), var(--background_color_2), var(--background_color_3));
 }
 .dark-mode{
     --background_color: #272727;
+    --background_color_2: #858585;
+    --background_color_3: #5f5f5f;
     --container_background_color: #2f2f2f;
-    --border_color: #c3c3c3;
-
-    --text_color: #eaeaea;
+    --border_color: #a4a4a4;
+    --invert_color: 0;
+    --light_text_color: #f6f6f6;
+    --dark_text_color: #363636;
 }
 
 .header{
     width: 90%;
     height: fit-content;
     margin: auto;
-    margin-top: 5vh;
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    justify-content: start;
-    align-items: center;
-    gap: 10px;
+    margin-top: 20vh;
 }
     .header h1{
+        text-align: center;
         user-select: none;
         font-size: 3rem;
-        color: var(--text_color);
-    }
-    .header img{
-        width: 15rem;
-        height: 15rem;
-        object-fit: cover;
+        color: var(--light_text_color);
     }
 
 .container{
+    width: 98%;
+    margin: auto;
+    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 15px;
+}
+
+.left_side_div{
+    width: 80px;
+    height: 50%;
+    position: sticky;
+    top: 100px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 15px;
+    border-radius: var(--border_raduis);
+    padding: 20px 0 20px 0;
+    background-color: #cadfef;
+}
+    .icon_left_side_div{
+        border-radius: var(--border_raduis);
+    }
+    .icon_left_side_div:hover{
+        background-color: var(--light_text_color);
+    }
+    .icon_left_side_div:hover img{
+        filter: invert(var(--invert_color));
+    }
+    .icon_left_side_div img{
+        width: 30px;
+        height: 30px;
+        padding: 10px;
+        object-fit: contain;
+        cursor: pointer;
+    }
+.main_div{
     width: 90%;
     height: fit-content;
-    margin: 30px auto 30px auto;
-    border: var(--border) var(--border_color);
-    border-radius: var(--border_raduis);
-    background-color: var(--container_background_color);
+    margin: auto;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     flex-direction: column;
     gap: 15px;
 }
     .data_div{
-        background-color: var(--background_color);
-        width: 90%;
-        margin: 30px auto 30px auto;
+        height: fit-content;
+        width: 100%;
         display: flex;
         flex-wrap: nowrap;
-        flex-direction: column;
-        gap: 20px;
-        justify-content: space-between;
+        flex-direction: row;
+        gap: 15px;
     }
-        #data_img{
-            width: 100%;
-            height: fit-content;
-            max-height: 500px;
-            object-fit: contain;
-
+        .chart_div{
+            width: 80%;
+            border: var(--border) var(--border_color);
+            border-radius: var(--border_raduis);
+            background-color: var(--container_background_color);
+            backdrop-filter: blur(3px);
+            -webkit-backdrop-filter: blur(3px);
         }
-        .item_image{
-            width: 30%;
-            height: fit-content;
-            max-width: 150px;
-            max-height: 150px;
-            object-fit: cover;
+            .chart{
+                width: 100%;
+                max-width: fit-content;
+            }
+        .detail_div{
+            width: 20%;
+            border: var(--border) var(--border_color);
+            border-radius: var(--border_raduis);
+            background-color: var(--container_background_color);
+            backdrop-filter: blur(3px);
+            -webkit-backdrop-filter: blur(3px);
         }
-        .item_text_div{
-            width: 100%;
-            display: flex;
-            flex-wrap: wrap;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-        .item_name_text{
-            font-size: 1.5rem;
-            color: var(--text_color);
-        }
-        .item_about_text{
-            font-size: 1rem;
-            max-height: 30%;
-            color: var(--text_color);
-        }
-        .item_date_text{
-            font-size: .8rem;
-            color: var(--text_color);
-        }
-
+    .news_div{
+        height: fit-content;
+        width: 100%;
+        overflow: hidden;
+        border: var(--border) var(--border_color);
+        border-radius: var(--border_raduis);
+        background-color: var(--container_background_color);
+        backdrop-filter: blur(3px);
+        -webkit-backdrop-filter: blur(3px);
+    }
 
 #darkmode_button{
     width: 30px;
     height: 30px;
     object-fit: contain;
-    animation: darkmode_button_fluid 3s infinite alternate-reverse;
-    -webkit-animation: darkmode_button_fluid 3s infinite alternate-reverse;
-    -o-animation: darkmode_button_fluid 3s infinite alternate-reverse;
-    -moz-animation: darkmode_button_fluid 3s infinite alternate-reverse;
 }
-    @keyframes darkmode_button_fluid {
-        from{rotate: 20deg;}
-        to{rotate: -20deg;}
-    }
+.footer{
+    margin: auto;
+    background-color: white;
+    border: 1px solid #b1b1b1;
+    border-radius: 5px;
+    width: fit-content;
+    padding: 5px;
+    color: #b1b1b1;
+    opacity: .3;
+    cursor: auto;
+    user-select: none;
+    transition: opacity 1s;
+}
+.footer:hover{
+    opacity: 1;
+}
 #gototop_button{
+    cursor: pointer;
     width: 50px;
     height: 50px;
     visibility: hidden;
